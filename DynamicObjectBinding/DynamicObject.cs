@@ -66,7 +66,7 @@ namespace DynamicObjectBinding
             }
         }
 
-        static Func<T, TResult> Functify<T, TResult>(Func<T, TResult> f) => f;
+        //static Func<T, TResult> Functify<T, TResult>(Func<T, TResult> f) => f;
 
         private Dictionary<string, int> properties = new Dictionary<string, int>();
 
