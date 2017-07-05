@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DynamicObjectBinding.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,7 @@ namespace DynamicObjectBinding
         {
             InitializeComponent();
 
-            var dyn = new DynamicObject();
+            var dyn = new DynamicObjectViewModel();
             dyn.Add("Prop1");
             dyn.Add("Prop2");
             dyn.Add("Prop3");

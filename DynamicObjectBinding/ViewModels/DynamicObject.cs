@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicObjectBinding
+namespace DynamicObjectBinding.ViewModels
 {
-    class DynamicObject : ICustomTypeDescriptor, INotifyPropertyChanged
+    class DynamicObjectViewModel : ViewModelBase, ICustomTypeDescriptor
     {
         private class _PropertyDescriptor : PropertyDescriptor
         {
@@ -15,7 +15,7 @@ namespace DynamicObjectBinding
             {
                 get
                 {
-                    return typeof(DynamicObject);
+                    return typeof(DynamicObjectViewModel);
                 }
             }
 
@@ -44,7 +44,7 @@ namespace DynamicObjectBinding
 
             public override object GetValue(object component)
             {
-                var dyn = (DynamicObject)component;
+                var dyn = (DynamicObjectViewModel)component;
                 return dyn.properties[Name];
             }
 
@@ -55,9 +55,9 @@ namespace DynamicObjectBinding
 
             public override void SetValue(object component, object value)
             {
-                var dyn = (DynamicObject)component;
+                var dyn = (DynamicObjectViewModel)component;
                 dyn.properties[Name] = (int)value;
-                dyn.PropertyChanged?.Invoke(dyn, new PropertyChangedEventArgs(Name));
+                dyn.NotifyPropertyChanged(Name);
             }
 
             public override bool ShouldSerializeValue(object component)
@@ -66,11 +66,7 @@ namespace DynamicObjectBinding
             }
         }
 
-        //static Func<T, TResult> Functify<T, TResult>(Func<T, TResult> f) => f;
-
         private Dictionary<string, int> properties = new Dictionary<string, int>();
-
-        public event PropertyChangedEventHandler PropertyChanged;
 
         public void Add(string name) => properties.Add(name, 0);
 
