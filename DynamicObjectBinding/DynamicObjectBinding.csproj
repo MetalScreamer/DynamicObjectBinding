@@ -55,10 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\NullToBooleanConverter.cs" />
+    <Compile Include="DynamicClassView.xaml.cs">
+      <DependentUpon>DynamicClassView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\Command.cs" />
     <Compile Include="ViewModels\DynamicClassViewModel.cs" />
     <Compile Include="ViewModels\DynamicPropertyDescriptionViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Page Include="DynamicClassView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

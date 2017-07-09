@@ -18,5 +18,7 @@ namespace DynamicObjectBinding.ViewModels
         }
 
         public ObservableCollection<DynamicPropertyDescriptionViewModel> Properties { get; } = new ObservableCollection<DynamicPropertyDescriptionViewModel>();
+
+        public static IEnumerable<PropertyType> DataTypes { get; } = Enum.GetValues(typeof(PropertyType)).Cast<PropertyType>();
     }
 }
