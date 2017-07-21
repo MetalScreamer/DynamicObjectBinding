@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace DynamicObjectBinding.ViewModels
+namespace DynamicObjects.ViewModels
 {
     public class Command : ICommand
     {
@@ -29,5 +29,7 @@ namespace DynamicObjectBinding.ViewModels
         {
             execute(parameter);
         }
+
+        public void RaiseCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty); 
     }
 }

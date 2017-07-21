@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicObjectBinding.ViewModels
+namespace DynamicObjects.ViewModels
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {

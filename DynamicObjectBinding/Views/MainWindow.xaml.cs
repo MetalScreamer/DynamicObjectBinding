@@ -1,4 +1,4 @@
-﻿using DynamicObjectBinding.ViewModels;
+﻿using DynamicObjects.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DynamicObjectBinding
+namespace DynamicObjects.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,12 +25,7 @@ namespace DynamicObjectBinding
         {
             InitializeComponent();
 
-            //var dyn = new DynamicObjectViewModel();
-            //dyn.Add("Prop1");
-            //dyn.Add("Prop2");
-            //dyn.Add("Prop3");
-            //DataContext = dyn;
-            Content = new DynamicClassView();
+            Content = new DynamicClassView() { DataContext = new DynamicClassViewModel() };
         }
     }
 }

@@ -1,21 +1,12 @@
-﻿using System;
+﻿using DynamicObjects.Shared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicObjectBinding.ViewModels
+namespace DynamicObjects.ViewModels
 {
-    public enum PropertyType
-    {
-        Long,
-        Integer,
-        Double,
-        String,
-        Boolean,
-        Object
-    }
-
     public class DynamicPropertyDescriptionViewModel : ViewModelBase
     {
         private string name;

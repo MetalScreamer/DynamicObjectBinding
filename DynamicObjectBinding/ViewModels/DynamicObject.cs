@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicObjectBinding.ViewModels
+namespace DynamicObjects.ViewModels
 {
     class DynamicObjectViewModel : ViewModelBase, ICustomTypeDescriptor
     {
