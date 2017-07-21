@@ -9,6 +9,6 @@ namespace DynamicObjects.Services
     public interface IClassDefinitionModel
     {
         string Name { get; set; }
-        IEnumerable<IPropertyDefinitionModel> Properties { get; }
+        IEnumerable<IPropertyDefinitionModel> Properties { get; } // mmm
     }
 }
